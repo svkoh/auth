@@ -235,6 +235,8 @@ func (s *Service) AddProvider(name, cid, csecret string) {
 		s.providers = append(s.providers, provider.NewService(provider.NewMicrosoft(p)))
 	case "twitter":
 		s.providers = append(s.providers, provider.NewService(provider.NewTwitter(p)))
+	case "wechat":
+		s.providers = append(s.providers, provider.NewService(provider.NewWechat(p)))
 	case "dev":
 		s.providers = append(s.providers, provider.NewService(provider.NewDev(p)))
 	default:
